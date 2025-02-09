@@ -2,39 +2,62 @@
   padding: 2rem;
   width: 100%;
   box-sizing: border-box;
+  text-align: center;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: white;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
+/* Title with neon glow effect */
 .favorites h2 {
   margin-bottom: 2rem;
-  text-align: center;
-  font-size: 2.5rem;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #e50914;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.8), 0 0 20px rgba(229, 9, 20, 0.6);
+  letter-spacing: 2px;
 }
 
+/* Empty favorites section */
 .favorites-empty {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   margin: 2rem auto;
   max-width: 600px;
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2);
+  animation: pulse 1.5s infinite alternate;
 }
 
 .favorites-empty h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
-  color: #e50914;
+  color: #ff3b3b;
 }
 
 .favorites-empty p {
-  color: #999;
-  font-size: 1.2rem;
+  color: #ccc;
+  font-size: 1.3rem;
   line-height: 1.6;
 }
 
+/* Subtle pulsing effect */
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2);
+  }
+  to {
+    transform: scale(1.05);
+    box-shadow: 0 4px 30px rgba(255, 0, 0, 0.4);
+  }
+}
 
-/* Animation for new favorites being added */
+/* Smooth fade-in animation for movie cards */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -47,6 +70,5 @@
 }
 
 .movies-grid > * {
-  animation: fadeIn 0.3s ease-out forwards;
+  animation: fadeIn 0.5s ease-out forwards;
 }
-
